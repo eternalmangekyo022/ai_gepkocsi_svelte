@@ -30,12 +30,26 @@
     };
 </script>
 
-<div>
+<div class="relative w-[50vw] h-[30rem]">
     <img
+        class="absolute w-[800px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
         src={cars[index].src}
         alt={cars[index].name}
-        width="1000"
-        on:click={increment}
+        width="700"
         draggable={false}
+    />
+    <img
+        draggable={false}
+        on:click={decrement}
+        src="https://www.svgrepo.com/show/335907/left-c.svg"
+        class="absolute top-1/2 -translate-y-1/2 left-10 cursor-pointer"
+        alt=""
+    />
+    <img
+        draggable={false}
+        on:click={increment}
+        src="https://www.svgrepo.com/show/335932/right-c.svg"
+        class="absolute top-1/2 -translate-y-1/2 right-10 cursor-pointer"
+        alt=""
     />
 </div>
